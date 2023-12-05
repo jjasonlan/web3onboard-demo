@@ -1,15 +1,235 @@
+html, body {
+  background-color: black;
+}
+
 .container {
+  background-color: black;
   display: flex;
+  padding-top: 10%;
   height: 600px;
   width: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: white;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
-button {
-  height: 40px;
-  width: 100px;
-  background-color: blue;
+.content {
+  max-height: 100%;
+  height: 400px;
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button.connect-button {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  --rem: 16;
+  --docsearch-spacing: 12px;
+  --docsearch-icon-stroke-width: 1.4;
+  --docsearch-container-background: rgba(101,108,133,.8);
+  --docsearch-modal-width: 560px;
+  --docsearch-modal-height: 600px;
+  --docsearch-searchbox-height: 56px;
+  --docsearch-searchbox-background: #ebedf0;
+  --docsearch-hit-height: 56px;
+  --docsearch-footer-height: 44px;
+  --kd-font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation, Mono, Fira Code VF, monospace;
+  --kd-code-fence-bg: var(--kd-prose-pre-bg, rgb(31, 41, 55));
+  --kd-code-fence-top-bar-bg: rgba(31, 41, 55, .3);
+  --kd-code-copied-bg-color: rgba(var(--kd-color-brand-rgb), .8);
+  --kd-terminal-line-pointer: var(--kd-color-brand);
+  --kd-code-highlight-border: var(--kd-color-brand);
+  --kd-code-highlight-color: rgba(var(--kd-color-brand-rgb), .05);
+  --kd-navbar-height: 5rem;
+  --kd-navbar-padding: 1rem 1.25rem;
+  --kd-navbar-max-width: 1440px;
+  --kd-navbar-border-bottom: 1px solid var(--kd-color-gray-divider);
+  --kd-sidebar-border-active: var(--kd-color-brand);
+  --kd-content-max-width: 1440px;
+  --kd-article-max-width: 85ch;
+  --kd-breadcrumbs-height: 0px;
+  --kd-sidebar-min-width: 17rem;
+  --kd-sidebar-max-width: 17rem;
+  --kd-sidebar-padding: 0 .5rem 2rem 1.5rem;
+  --docsearch-primary-color: var(--kd-color-brand);
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-text-color: var(--kd-color-gray-inverse);
+  --docsearch-searchbox-shadow: none;
+  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-key-gradient: transparent;
+  --docsearch-key-shadow: none;
+  --docsearch-hit-active-color: var(--kd-color-gray-inverse);
+  --kd-color-brand-rgb: 99, 112, 229;
+  --kd-font-family-sans: "Sofia Pro";
+  --account-center-position-top: 5rem;
+  --kd-color-gray-soft: rgb(140, 140, 140);
+  --kd-color-gray-inverse: rgb(255, 255, 255);
+  --kd-color-gray-current: rgb(0, 0, 0);
+  --kd-color-gray-divider: rgb(49, 49, 49);
+  --kd-color-gray-hover: rgb(54, 54, 54);
+  --kd-color-gray-hover-inverse: rgb(245, 245, 245);
+  --kd-color-gray-elevate: rgb(45, 45, 45);
+  --kd-color-gray-body: rgb(26, 29, 38);
+  color-scheme: dark;
+  --kd-color-brand: 99 112 229;
+  --kd-color-soft: 140 140 140;
+  --kd-color-inverse: 245 245 245;
+  --kd-color-border: 38 48 64;
+  --kd-color-elevate: 10 19 33;
+  --kd-color-body: 26 29 38;
+  --kd-color-focus: 129 140 248;
+  --docsearch-modal-shadow: none;
+  --docsearch-footer-shadow: none;
+  --docsearch-hit-background: #292929;
+  --docsearch-hit-color: #b4b4b4;
+  --docsearch-modal-background: #2d2d2d;
+  --docsearch-hit-shadow: none;
+  --docsearch-footer-background: #242424;
+  --docsearch-muted-color: #b4b4b4;
+  --docsearch-logo-color: #b4b4b4;
+  --w3o-background-color: #1A1D26;
+  --w3o-foreground-color: #242835;
+  --w3o-text-color: #EFF1FC;
+  --w3o-border-color: #33394B;
+  --w3o-action-color: #929bed;
+  --w3o-border-radius: 16px;
+  --w3o-font-family: inherit;
+  --kd--navbar-height: calc(var(--kd-navbar-height) + var(--kd-breadcrumbs-height));
+  --tw-prose-invert-body: #d1d5db;
+  --tw-prose-invert-headings: #fff;
+  --tw-prose-invert-lead: #9ca3af;
+  --tw-prose-invert-links: #fff;
+  --tw-prose-invert-bold: #fff;
+  --tw-prose-invert-counters: rgb(var(--kd-color-inverse));
+  --tw-prose-invert-bullets: #4b5563;
+  --tw-prose-invert-hr: #374151;
+  --tw-prose-invert-quotes: #f3f4f6;
+  --tw-prose-invert-quote-borders: #374151;
+  --tw-prose-invert-captions: #9ca3af;
+  --tw-prose-invert-kbd: #fff;
+  --tw-prose-invert-kbd-shadows: 255 255 255;
+  --tw-prose-invert-code: #fff;
+  --tw-prose-invert-pre-code: #d1d5db;
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: #4b5563;
+  --tw-prose-invert-td-borders: #374151;
+  --tw-prose-body: var(--tw-prose-invert-body);
+  --tw-prose-headings: var(--tw-prose-invert-headings);
+  --tw-prose-lead: var(--tw-prose-invert-lead);
+  --tw-prose-links: var(--tw-prose-invert-links);
+  --tw-prose-bold: var(--tw-prose-invert-bold);
+  --tw-prose-counters: var(--tw-prose-invert-counters);
+  --tw-prose-bullets: var(--tw-prose-invert-bullets);
+  --tw-prose-hr: var(--tw-prose-invert-hr);
+  --tw-prose-quotes: var(--tw-prose-invert-quotes);
+  --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
+  --tw-prose-captions: var(--tw-prose-invert-captions);
+  --tw-prose-kbd: var(--tw-prose-invert-kbd);
+  --tw-prose-kbd-shadows: var(--tw-prose-invert-kbd-shadows);
+  --tw-prose-code: var(--tw-prose-invert-code);
+  --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
+  --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
+  --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
+  --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / .5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+  -webkit-tap-highlight-color: transparent;
+  font-family: inherit;
+  margin-top: 10px;
+  text-transform: none;
+  -webkit-appearance: button;
+  background-image: none;
+  cursor: pointer;
+  display: flex;
+  transform: translate3d(var(--tw-translate-x),var(--tw-translate-y),0) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  align-items: center;
+  justify-content: center;
+  border-radius: .375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--kd-color-inverse) / var(--tw-bg-opacity));
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(var(--kd-color-body) / var(--tw-text-opacity));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+button.connect-button:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  background-color: rgb(var(--kd-color-inverse) / .9);
+}
+
+.container a {
+  color: white
+}
+
+.container a:visited {
   color: white;
-  font-size: large;
+}
+
+.content img {
+  margin-bottom: 50px;
 }
