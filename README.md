@@ -1,3 +1,8 @@
+# ARCHIVED
+
+Please refer to the latest examples on the
+[Capsule Docs Examples Hub](https://docs.usecapsule.com/getting-started/examples)
+
 # Blocknative Web3Onboard Demo
 
 A simple app demonstrating cross-app Capsule account usage with web3onboard authentication.
